@@ -19,15 +19,17 @@
         </tr>
       </thead>
       <tbody>
-        <td>1</td>
-        <td>
-          <a href="" class="btn btn-warning">
-            <span data-feather="edit"></span>
-          </a>
-          <a href="" class="btn btn-danger">
-            <span data-feather="trash"></span>
-          </a>
-        </td>
+        <tr>
+          <td>1</td>
+          <td>
+            <a href="" class="btn btn-warning">
+              <span data-feather="edit"></span>
+            </a>
+            <a href="" class="btn btn-danger">
+              <span data-feather="trash"></span>
+            </a>
+          </td>
+        </tr>
       </tbody>
     </table>
   </div>

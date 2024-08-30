@@ -1,4 +1,7 @@
-<?php include_once('../config.php'); ?>
+<?php
+  include_once('../config.php');
+  include_once('../dbConnection.php');
+?>
 <!doctype html>
 <html lang="en">
 
