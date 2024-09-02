@@ -37,10 +37,10 @@
             <td><?= $row['name'] ?></td>
             <td><?= $row['description'] ?></td>
             <td>
-              <a href="" class="btn btn-warning">
+              <a href="<?= PROJECT_ROOT ?>/courses/edit.php?id=<?= $row['id'] ?>" class="btn btn-warning">
                 <span data-feather="edit"></span>
               </a>
-              <a href="" class="btn btn-danger">
+              <a href="<?= PROJECT_ROOT ?>/courses/delete.php?id=<?= $row['id'] ?>" class="btn btn-danger">
                 <span data-feather="trash"></span>
               </a>
             </td>
