@@ -1,6 +1,12 @@
 <?php
-  include_once('../config.php');
-  include_once('../dbConnection.php');
+include_once('../config.php');
+include_once('../dbConnection.php');
+
+session_start();
+
+if (!isset($_SESSION['isLoggedIn'])) {
+  header('Location: ' . PROJECT_ROOT . '/auth/login.php');
+}
 ?>
 <!doctype html>
 <html lang="en">
@@ -14,7 +20,7 @@
   <title>School Management System</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="<?= PROJECT_ROOT ?>/assets/bootstrap.min.css" rel="stylesheet"/>
+  <link href="<?= PROJECT_ROOT ?>/assets/bootstrap.min.css" rel="stylesheet" />
 
   <!-- Favicons -->
   <link rel="icon" href="<?= PROJECT_ROOT ?>/assets/img/favicons/favicon.ico">
@@ -37,7 +43,7 @@
   </style>
 
   <!-- Custom styles for this template -->
-  <link href="<?= PROJECT_ROOT ?>/assets/dashboard.css" rel="stylesheet"/>
+  <link href="<?= PROJECT_ROOT ?>/assets/dashboard.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -50,7 +56,7 @@
     <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
     <div class="navbar-nav">
       <div class="nav-item text-nowrap">
-        <a class="nav-link px-3" href="#">Sign out</a>
+        <a class="nav-link px-3" href="<?= PROJECT_ROOT ?>/auth/process.php?action=logout">Sign out</a>
       </div>
     </div>
   </header>

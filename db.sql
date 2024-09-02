@@ -94,3 +94,16 @@ ADD UNIQUE (student_id);
 
 ALTER TABLE teachers
 ADD UNIQUE (teacher_id);
+
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100),
+  email VARCHAR(100),
+  password VARCHAR(255),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+ALTER TABLE users
+ADD UNIQUE (email);
+
+

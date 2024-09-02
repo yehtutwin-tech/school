@@ -1,7 +1,6 @@
 <?php include_once('../partials/header.php'); ?>
 
 <?php
-  $insert_id = '';
   if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (!empty($_POST['name']) && !empty($_POST['description'])) {
       $name = $_POST['name'];
